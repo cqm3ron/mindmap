@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("cerebral-cartography"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e32d9b9bcfc5e6d90c6cabf87e6d91d7319fa16d"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("cerebral-cartography"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("cerebral-cartography"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
