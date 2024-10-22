@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cerebral Cartography</title>
+    <script>
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        function dragStart(ev) {
+            isDragging = true;
+            const rect = ev.target.getBoundingClientRect();
+            offsetX = ev.clientX - rect.left;
+            offsety = ev.clientY - rect.top;
+            ev.target.style.cursor = 'grabbing';
+        }
+        
+        function drag(ev) {
+            if (isDragging) {
+                const draggable = document.getElementById("circle1");
+                draggable.style.left = `${ev.clientX - offsetX}px`
+                draggable.style.top = `${ev.clientY - offsetY}px`
+            }
+        }
+
+        function dragEnd(ev) {
+            isDragging = false;
+            ev.target.style.cursor = 'grab';
+        }
+    </script>
+</head>
+<body onmousemove="drag(event)" onmouseup="dragEnd(event)">
+    <div class="toolbar">
+        <button id="titleBtn" onclick="alert('sike circle is back')">Add Title Circle</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>
+        test
+    </p>
+    <br>
+    <br>
+    <br>
+    <div ondrop="drop(event)" ondragover="allowDrop(event)">
+    <span id="circle1" class="circle" onmousedown="dragStart(event)" onmouseup="dragend(event)"></span>
+    </div>
+    <div ondrop="drop(event)" ondragover="allowDrop(event)">
+        
+    </div>
+</body>
+</html>
