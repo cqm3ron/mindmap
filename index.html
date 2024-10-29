@@ -13,7 +13,7 @@
             isDragging = true;
             const rect = ev.target.getBoundingClientRect();
             offsetX = ev.clientX - rect.left;
-            offsety = ev.clientY - rect.top;
+            offsetY = ev.clientY - rect.top;
             ev.target.style.cursor = 'grabbing';
         }
         
@@ -35,16 +35,6 @@
     <div class="toolbar">
         <button id="titleBtn" onclick="alert('sike circle is back')">Add Title Circle</button>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p>
-        test
-    </p>
-    <br>
-    <br>
-    <br>
     <div ondrop="drop(event)" ondragover="allowDrop(event)">
     <span id="circle1" class="circle" onmousedown="dragStart(event)" onmouseup="dragend(event)"></span>
     </div>
